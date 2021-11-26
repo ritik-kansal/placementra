@@ -1,0 +1,67 @@
+$colors :("white":#ffffff,"off-white":#ccc);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$margin_top_sizes: 8, 16, 20, 24, 32, 40, 60;
+$margin_bottom_sizes: 8, 16, 20, 24, 32, 40, 60;
+$margin_right_sizes: 0, 8, 12;
+$margin_left_sizes: 0;
+$padding_top_sizes: 8, 12, 16, 32, 100;
+$padding_bottom_sizes: 12, 16, 32;
+$padding_right_sizes: 0, 16;
+$padding_left_sizes: 0, 16, 32;
+
+$spacing: "mt" "margin-top" $margin_top_sizes, "mr" "margin-right" $margin_right_sizes, "mb" "margin-bottom" $margin_bottom_sizes, "ml" "margin-left" $margin_left_sizes, "pt" "padding-top" $padding_top_sizes, "pb" "padding-bottom" $padding_bottom_sizes, "pr" "padding-right" $padding_right_sizes, "pl" "padding-left" $padding_left_sizes;
+
+@each $class_name,
+$property,
+$domain in $spacing {
+    @each $size in $domain {
+        .#{$class_name}-#{$size} {
+            #{$property}: #{$size}px !important;
+        }
+    }
+}
+
+.bg-white{
+    background-color: map-get($map: $colors, $key: "white");
+}
+
+.min-vh-100{
+    min-height: 100vh;
+}
+
+.aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    border-right: 1px solid map-get($map: $colors, $key: "off-white");
+}
+
+.aside-nav{
+    margin-top: 100px;
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        color: map-get($map: $colors, $key: "black");
+        margin:24px 0px;
+        width: 100%;
+        padding: 8px 0;
+        &.active{
+            border-left:5px solid map-get($map: $colors, $key: "black");
+        }
+        span{
+            margin-left: 30%;
+            img{
+                margin-right:10px;
+                vertical-align:top; //for some reasone middle is not working with small size of img
+            }
+        }
+    }
+}

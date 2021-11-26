@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+// import logo from './logo.svg'; 
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import './css/main.css';
+import Sidebar from './components/Sidebar';
+import { Switch, Route, withRouter } from "react-router-dom";
+import Cookies from 'universal-cookie';
+import axios from 'axios'
+class App extends Component {
+  render(){
+    return (
+      // wrapped in router in index.js 
+      <Switch>
+          <Route exact path="/dashboard">
+              <Sidebar/>
+          </Route>
+          
+      </Switch>
   );
+  }
 }
 
-export default App;
+export default withRouter(App);
