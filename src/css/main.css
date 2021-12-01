@@ -3,6 +3,86 @@
   padding: 0;
 }
 
+.white {
+  color: #ffffff !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.off-white {
+  color: #ccc !important;
+}
+
+.bg-off-white {
+  background-color: #ccc !important;
+}
+
+.black {
+  color: #000 !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.gray {
+  color: #1c1c1c !important;
+}
+
+.bg-gray {
+  background-color: #1c1c1c !important;
+}
+
+.cream {
+  color: #F9F9F3 !important;
+}
+
+.bg-cream {
+  background-color: #F9F9F3 !important;
+}
+
+.dark-cream {
+  color: #E3E2D4 !important;
+}
+
+.bg-dark-cream {
+  background-color: #E3E2D4 !important;
+}
+
+.orange {
+  color: #FFEFE1 !important;
+}
+
+.bg-orange {
+  background-color: #FFEFE1 !important;
+}
+
+.green {
+  color: #EBFFEF !important;
+}
+
+.bg-green {
+  background-color: #EBFFEF !important;
+}
+
+.blue {
+  color: #E4F5FB !important;
+}
+
+.bg-blue {
+  background-color: #E4F5FB !important;
+}
+
+.purple {
+  color: #F4F4F9 !important;
+}
+
+.bg-purple {
+  background-color: #F4F4F9 !important;
+}
+
 .mt-8 {
   margin-top: 8px !important;
 }
@@ -25,6 +105,10 @@
 
 .mt-40 {
   margin-top: 40px !important;
+}
+
+.mt-48 {
+  margin-top: 48px !important;
 }
 
 .mt-60 {
@@ -127,8 +211,56 @@
   padding-left: 32px !important;
 }
 
-.bg-white {
-  background-color: #ffffff;
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.f-8 {
+  font-size: 8px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-32 {
+  font-size: 32px;
+}
+
+.f-36 {
+  font-size: 36px;
+}
+
+.f-48 {
+  font-size: 48px;
 }
 
 .min-vh-100 {
@@ -151,19 +283,77 @@
   padding: 0;
 }
 .aside-nav li {
-  margin: 24px 0px;
+  color: #000;
+  margin: 24px 0;
   width: 100%;
   padding: 8px 0;
 }
 .aside-nav li.active {
-  border-left: 5px solid;
+  border-left: 5px solid #000;
 }
 .aside-nav li span {
-  margin-left: 30%;
+  margin-left: 25%;
 }
 .aside-nav li span img {
   margin-right: 10px;
   vertical-align: top;
+}
+
+.main-side {
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 48px;
+}
+
+.searchbar {
+  position: relative;
+}
+.searchbar input {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 12px 0 12px 48px;
+  width: 60%;
+}
+.searchbar .searchbar-icon {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+}
+.searchbar .searchbar-icon img {
+  width: 16px;
+}
+
+.filters {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  padding: 12px 52px 12px 20px;
+  border-radius: 12px;
+}
+.filters img {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  width: 16px;
+}
+
+.card {
+  border-radius: 32px;
+  border: 1px solid #F9F9F3;
+  padding: 36px;
+}
+.card .icon {
+  display: inline-block;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.card .icon img {
+  width: 16px;
+  transform: translate(-50%, -50%);
+  margin-top: 50%;
+  margin-left: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,32 @@
-$colors :("white":#ffffff,"off-white":#ccc);
+$colors: (
+    "white": #ffffff,
+    "off-white": #ccc,
+    "black": #000,
+    "gray": #1c1c1c,
+    "cream": #F9F9F3,
+    "dark-cream": #E3E2D4,
+    "orange": #FFEFE1,
+    "green": #EBFFEF,
+    "blue": #E4F5FB,
+    "purple": #F4F4F9
+);
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-$margin_top_sizes: 8, 16, 20, 24, 32, 40, 60;
+@each $color_name,
+$color in $colors {
+    .#{$color_name} {
+        color: $color !important;
+    }
+    .bg-#{$color_name} {
+        background-color: $color !important;
+    };
+}
+
+$margin_top_sizes: 8, 16, 20, 24, 32, 40, 48, 60;
 $margin_bottom_sizes: 8, 16, 20, 24, 32, 40, 60;
 $margin_right_sizes: 0, 8, 12;
 $margin_left_sizes: 0;
@@ -26,15 +47,26 @@ $domain in $spacing {
     }
 }
 
-.bg-white{
-    background-color: map-get($map: $colors, $key: "white");
+$font_weight: 400, 500, 600, 700, 800;
+$fonts: 8, 12, 16, 20, 24, 32, 36, 48;
+
+@each $weight in $font_weight {
+    .fw-#{$weight} {
+        font-weight: #{$weight};
+    }
 }
 
-.min-vh-100{
+@each $font in $fonts {
+    .f-#{$font} {
+        font-size: #{$font}px;
+    }
+}
+
+.min-vh-100 {
     min-height: 100vh;
 }
 
-.aside{
+.aside {
     position: absolute;
     left: 0;
     top: 0;
@@ -42,26 +74,85 @@ $domain in $spacing {
     border-right: 1px solid map-get($map: $colors, $key: "off-white");
 }
 
-.aside-nav{
+.aside-nav {
     margin-top: 100px;
-    ul{
+    ul {
         list-style: none;
         padding: 0;
     }
-    li{
+    li {
         color: map-get($map: $colors, $key: "black");
-        margin:24px 0px;
+        margin: 24px 0;
         width: 100%;
         padding: 8px 0;
-        &.active{
-            border-left:5px solid map-get($map: $colors, $key: "black");
+        &.active {
+            border-left: 5px solid map-get($map: $colors, $key: "black");
         }
-        span{
-            margin-left: 30%;
-            img{
-                margin-right:10px;
-                vertical-align:top; //for some reasone middle is not working with small size of img
+        span {
+            margin-left: 25%;
+            img {
+                margin-right: 10px;
+                vertical-align: top; // for some reasone middle is not working with small size of img
             }
+        }
+    }
+}
+
+.main-side {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom:48px;
+}
+
+.searchbar {
+    position: relative;
+    input {
+        border-radius: 12px;
+        border: 1px solid map-get($map: $colors, $key: "off-white");
+        padding: 12px 0 12px 48px;
+        width: 60%;
+    }
+    .searchbar-icon {
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        img {
+            width: 16px;
+        }
+    }
+}
+
+.filters {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    border: 1px solid map-get($map: $colors, $key: "off-white");
+    padding: 12px 52px 12px 20px;
+    border-radius: 12px;
+    img {
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        width: 16px;
+    }
+}
+.card {
+    border-radius: 32px;
+    border: 1px solid map-get($map: $colors, $key: "cream");
+    padding: 36px;
+    .icon {
+        display: inline-block;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        // line-height: 36px;
+        img {
+            width: 16px;
+            transform: translate(-50%, -50%);
+            margin-top: 50%;
+            margin-left: 50%;
+            // line-height: 36px;
         }
     }
 }

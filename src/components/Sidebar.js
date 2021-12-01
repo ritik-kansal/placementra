@@ -4,10 +4,10 @@ import { Link,withRouter } from 'react-router-dom'
 class Sidebar extends Component {
     render(){
         return(    
-            <div className="col-3 min-vh-100 aside bg-white position-fixed">
+            <div className="col-2 min-vh-100 aside bg-white position-fixed">
                 <div class="aside-img mt-20 text-center">
                     <Link className="" to="/">
-                        <img class="d-lg-inline d-none" src="./img/logo.jpg" alt=" " style={{width: "80%"}}/>
+                        <img class="d-lg-inline d-none" src="./img/logo.jpg" alt=" " style={{width: "50%"}}/>
                     </Link>
                 </div>
                 <div className="aside-nav">
