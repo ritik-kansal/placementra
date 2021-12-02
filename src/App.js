@@ -6,6 +6,9 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import Cookies from 'universal-cookie';
 import axios from 'axios'
 import Dashboard from './components/pages/Dashboard';
+import Applied from './components/pages/Applied';
+import OnCampus from './components/pages/OnCampus';
+import OffCampus from './components/pages/OffCampus';
 class App extends Component {
   render(){
     return (
@@ -13,6 +16,15 @@ class App extends Component {
       <Switch>
           <Route exact path="/dashboard">
               <Dashboard/>
+          </Route>
+          <Route exact path="/applied">
+              <Applied/>
+          </Route>
+          <Route exact path="/on-campus">
+              <OnCampus/>
+          </Route>
+          <Route exact path="/off-campus">
+              <OffCampus/>
           </Route>
           
       </Switch>
