@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .white {
   color: #ffffff !important;
 }
@@ -81,6 +76,14 @@
 
 .bg-purple {
   background-color: #F4F4F9 !important;
+}
+
+.color0 {
+  color: #E2E2E2 !important;
+}
+
+.bg-color0 {
+  background-color: #E2E2E2 !important;
 }
 
 .mt-8 {
@@ -199,12 +202,20 @@
   padding-right: 16px !important;
 }
 
+.pr-24 {
+  padding-right: 24px !important;
+}
+
 .pl-0 {
   padding-left: 0px !important;
 }
 
 .pl-16 {
   padding-left: 16px !important;
+}
+
+.pl-24 {
+  padding-left: 24px !important;
 }
 
 .pl-32 {
@@ -261,6 +272,10 @@
 
 .f-48 {
   font-size: 48px;
+}
+
+.row {
+  margin: 0;
 }
 
 .min-vh-100 {
@@ -354,6 +369,176 @@
   transform: translate(-50%, -50%);
   margin-top: 50%;
   margin-left: 50%;
+}
+
+.right-side {
+  border-radius: 32px;
+  position: fixed;
+  right: 48px;
+  right: 16px;
+  top: 48px;
+  bottom: 48px;
+  z-index: 99;
+}
+
+.calendar-div {
+  position: absolute;
+  bottom: 32px;
+  right: 24px;
+  left: 24px;
+}
+
+.react-calendar {
+  max-width: 100%;
+  background: transparent;
+  line-height: 1.125em;
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0px;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  height: 44px;
+  margin-bottom: 1em;
+  max-width: 100%;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  border-radius: 5px;
+  color: #F9F9F3;
+  margin: 0 5px;
+  padding: 8px;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #F9F9F3;
+  color: #000;
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers {
+  font-weight: bold;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000 !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 0.75em 0.5em;
+  border: 2px solid #000 !important;
+  border-radius: 5px;
+  background: #F9F9F3;
+  color: #000;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #F9F9F3;
+  color: #000;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffffa9;
+}
+
+.react-calendar__tile--hasActive {
+  background: #F9F9F3;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+  background: #F9F9F3;
+  color: #000;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #F9F9F3;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
 }
 
 /*# sourceMappingURL=main.css.map */

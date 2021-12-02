@@ -3,11 +3,14 @@ import { Component } from 'react'
 import Sidebar from '../Sidebar'
 import Searchbar from '../Searchbar'
 import CompanyCard from '../CompanyCard'
+import RightSide from '../RightSide'
 import { Link,withRouter } from 'react-router-dom'
 class Dashboard extends Component {
     render(){
         return(    
             <>
+            <div className="row">
+                
                 <Sidebar/>
                 <div className="main-side col-7 offset-2 bg-white">
                     <div className="mt-48">
@@ -94,6 +97,8 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </div>
+                <RightSide />
+            </div>
             </>
         )
     }
