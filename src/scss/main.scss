@@ -48,7 +48,7 @@ $domain in $spacing {
     }
 }
 
-$font_weight: 400, 500, 600, 700, 800;
+$font_weight: 100,200,300,400, 500, 600, 700, 800;
 $fonts: 8, 12, 16, 20, 24, 32, 36, 48;
 
 @each $weight in $font_weight {
@@ -175,7 +175,41 @@ $fonts: 8, 12, 16, 20, 24, 32, 36, 48;
     left: 24px;
 }
 
-
+.company-card{
+  background-color: map-get($map: $colors, $key: "blue");
+  padding:16px;
+  border-radius: 32px;
+  position: relative;
+  .top{
+    border-radius: 32px 32px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    // bottom: 100px;
+    height: 100px;
+    background-color: map-get($map: $colors, $key: "orange");
+  }
+  .company-logo{
+    height: 100px;
+    transform: translate(20px,50px);
+    border-radius: 10px;
+  }
+  .company-info{
+    margin-top: 150px;
+  }
+  .company-attributes{
+    img{
+      width: 20px;
+    }
+    span{
+      margin-left:12px;
+    }
+  }
+  .company-button{
+    border-top: 1px solid map-get($map: $colors, $key: "black");
+  }
+}
 
 
 // calendar
